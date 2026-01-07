@@ -1,161 +1,270 @@
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title>Matthias Doepke</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthias Doepke - Pictures</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1E3A5F;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2d4a6f;
+        }
+
+        nav a.active {
+            background-color: #152d4a;
+        }
+
+        /* Page Header */
+        .page-header {
+            border-bottom: 3px solid #1E3A5F;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            color: #1E3A5F;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        /* Links */
+        a {
+            color: #1E3A5F;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .photo-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .photo-item img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .photo-item .caption {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 2px solid #1E3A5F;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .photo-item img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="vita.pdf">Curriculum Vitae</a></li>
+        </ul>
+    </nav>
 
-<body alink="543D7d" bgcolor="#FFFFFF" link="#543D7d" text="#000000" vlink="#543D7d">
+    <div class="container">
+        <header class="page-header">
+            <h1>Pictures</h1>
+        </header>
 
+        <main class="photo-gallery">
+            <div class="photo-item">
+                <img src="pictures/michael_cai.jpg" alt="Larry Christiano, Michael Cai, Matt Rognlie, Marios Angeletos">
+                <p class="caption">Larry Christiano, Michael Cai, Matt Rognlie, Marios Angeletos</p>
+            </div>
 
-<table width="90%">
-<tbody><tr>
+            <div class="photo-item">
+                <img src="pictures/carl_emre.jpg" alt="Emre Yavuz and Carl Hallmann">
+                <p class="caption">Emre Yavuz and Carl Hallmann</p>
+            </div>
 
-<td rowspan="4" width="10%"></td>
-<td colspan="3" valign="bottom">
-</td>
-</tr>
+            <div class="photo-item">
+                <img src="pictures/kristina.jpg" alt="Kristina Manysheva, Marti Mestieri, and Chris Udry">
+                <p class="caption">Kristina Manysheva, Marti Mestieri, and Chris Udry</p>
+            </div>
 
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
-<tr>
-<td valign="top" width="200">
-</td>
+            <div class="photo-item">
+                <img src="pictures/jane.jpg" alt="Jane Olmstead-Rumsey">
+                <p class="caption">Jane Olmstead-Rumsey</p>
+            </div>
 
-<td width="20"></td>
-<td>
+            <div class="photo-item">
+                <img src="pictures/bence.jpg" alt="Bence Bardoczy">
+                <p class="caption">Bence Bardoczy</p>
+            </div>
 
-<font color="#520063" face="arial" size="6">
-Pictures</font>
-<p>
+            <div class="photo-item">
+                <img src="pictures/egor.jpg" alt="Egor Kozlov">
+                <p class="caption">Egor Kozlov</p>
+            </div>
 
-<font color="#000000" face="arial" size="2">
-[<a href="index.html">Home</a>] [<a href="vita.pdf" onClick="javascript:urchinTracker ('vita.pdf'); ">Curriculum Vitae</a>]
-[<a href="research.html">Research</a>] 
-<p>
-<hr>
-<p>
-<img src="pictures/michael_cai.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Larry Christiano, Michael Cai, Matt Rognlie, Marios Angeletos</FONT>
+            <div class="photo-item">
+                <img src="pictures/students2021.jpg" alt="Fergal Hanks, Yan Chiu, Kristina Manysheva, Laura Murphy, and Carl Hallmann">
+                <p class="caption">Fergal Hanks, Yan Chiu, Kristina Manysheva, Laura Murphy, and Carl Hallmann</p>
+            </div>
 
-<p>
-<img src="pictures/carl_emre.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Emre Yavuz and Carl Hallmann</FONT>
+            <div class="photo-item">
+                <img src="pictures/gaby.jpg" alt="Gaby Cugat">
+                <p class="caption">Gaby Cugat</p>
+            </div>
 
+            <div class="photo-item">
+                <img src="pictures/sena.jpg" alt="Sena Coskun">
+                <p class="caption">Sena Coskun</p>
+            </div>
 
-<p>
-<img src="pictures/kristina.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Kristina Manysheva, Marti Mestieri, and Chris Udry</FONT>
+            <div class="photo-item">
+                <img src="pictures/enrico.jpg" alt="Enrico Berkes">
+                <p class="caption">Enrico Berkes</p>
+            </div>
 
-<p>
-<img src="pictures/jane.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Jane Olmstead-Rumsey</FONT>
+            <div class="photo-item">
+                <img src="pictures/fabriziogiuseppe.jpg" alt="Fabrizio Zilibotti and Giuseppe Sorrenti">
+                <p class="caption">Fabrizio Zilibotti and Giuseppe Sorrenti</p>
+            </div>
 
-<p>
-<img src="pictures/bence.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Bence Bardoczy</FONT>
+            <div class="photo-item">
+                <img src="pictures/ruben.jpg" alt="Ruben Gaetani">
+                <p class="caption">Ruben Gaetani</p>
+            </div>
 
-<p>
-<img src="pictures/egor.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Egor Kozlov</FONT>
+            <div class="photo-item">
+                <img src="pictures/andreasruben.jpg" alt="Andreas Kropf and Ruben Gaetani">
+                <p class="caption">Andreas Kropf and Ruben Gaetani</p>
+            </div>
 
-<p>
-<img src="pictures/students2021.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Fergal Hanks, Yan Chiu, Kristina Manysheva, Laura Murphy, and Carl Hallmann </FONT>
+            <div class="photo-item">
+                <img src="pictures/veronika.jpg" alt="Guido Lorenzoni and Veronika Selezneva">
+                <p class="caption">Guido Lorenzoni and Veronika Selezneva</p>
+            </div>
 
+            <div class="photo-item">
+                <img src="pictures/arlene.jpg" alt="Marty Eichenbaum, Sergio Rebelo, Arlene Wong, and Aviv Nevo">
+                <p class="caption">Marty Eichenbaum, Sergio Rebelo, Arlene Wong, and Aviv Nevo</p>
+            </div>
 
-<p>
-<img src="pictures/gaby.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Gaby Cugat</FONT>
-<p>
-<img src="pictures/sena.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Sena Coskun</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/enrico.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Enrico Berkes</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/fabriziogiuseppe.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Fabrizio Zilibotti and Giuseppe Sorrenti</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/ruben.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Ruben Gaetani</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/andreasruben.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Andreas Kropf and Ruben Gaetani</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/veronika.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Guido Lorenzoni and Veronika Selezneva</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/arlene.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Marty Eichenbaum, Sergio Rebelo, Arlene Wong, and Aviv Nevo</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/david_de_la_croix.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-David de la Croix</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/andreamartindirk.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Martin Schneider, Andrea Eisfeldt, and Dirk Krueger</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/michele.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Mich&egrave;le Tertilt</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/fabian.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Fabian Kindermann</FONT>
-<p>
-<hr>
-<p>
-<img src="pictures/fabrizio.jpg" alt="Photo" valign="top" width="80%">
-<P><FONT FACE="Arial,Helvetica">
-Maria Saez-Marti, Nora Zilibotti, and Fabrizio Zilibotti</FONT>
-<p>
+            <div class="photo-item">
+                <img src="pictures/david_de_la_croix.jpg" alt="David de la Croix">
+                <p class="caption">David de la Croix</p>
+            </div>
 
+            <div class="photo-item">
+                <img src="pictures/andreamartindirk.jpg" alt="Martin Schneider, Andrea Eisfeldt, and Dirk Krueger">
+                <p class="caption">Martin Schneider, Andrea Eisfeldt, and Dirk Krueger</p>
+            </div>
 
+            <div class="photo-item">
+                <img src="pictures/michele.jpg" alt="Michèle Tertilt">
+                <p class="caption">Michèle Tertilt</p>
+            </div>
 
+            <div class="photo-item">
+                <img src="pictures/fabian.jpg" alt="Fabian Kindermann">
+                <p class="caption">Fabian Kindermann</p>
+            </div>
 
-</tr>
+            <div class="photo-item">
+                <img src="pictures/fabrizio.jpg" alt="Maria Saez-Marti, Nora Zilibotti, and Fabrizio Zilibotti">
+                <p class="caption">Maria Saez-Marti, Nora Zilibotti, and Fabrizio Zilibotti</p>
+            </div>
+        </main>
 
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
-</tbody></table>
-
-</body></html>
+        <footer>
+            <p>© Matthias Doepke · London School of Economics</p>
+        </footer>
+    </div>
+</body>
+</html>

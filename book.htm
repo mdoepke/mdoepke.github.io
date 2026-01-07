@@ -1,131 +1,402 @@
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title>Matthias Doepke</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macroeconomics - Matthias Doepke</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1E3A5F;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2d4a6f;
+        }
+
+        /* Links */
+        a {
+            color: #1E3A5F;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Book Header */
+        .book-header {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #1E3A5F;
+        }
+
+        .book-cover {
+            flex-shrink: 0;
+        }
+
+        .book-cover img {
+            width: 150px;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .book-info h1 {
+            color: #1E3A5F;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .book-info .authors {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            color: #1E3A5F;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+
+        /* Download Section */
+        .download-section {
+            background-color: #f8f9fa;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .download-section h3 {
+            color: #1E3A5F;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .download-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .download-table th {
+            text-align: left;
+            padding: 8px 12px;
+            background-color: #1E3A5F;
+            color: white;
+            font-weight: 500;
+        }
+
+        .download-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .download-table tr:hover {
+            background-color: #f0f4f8;
+        }
+
+        .download-table a {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #1E3A5F;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+        }
+
+        .download-table a:hover {
+            background-color: #152d4a;
+            text-decoration: none;
+        }
+
+        .file-size {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 2px solid #1E3A5F;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .book-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-cover img {
+                width: 120px;
+            }
+
+            .book-info h1 {
+                font-size: 1.6rem;
+            }
+
+            .download-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="vita.pdf">Curriculum Vitae</a></li>
+        </ul>
+    </nav>
 
-<body alink="543D7d" bgcolor="#FFFFFF" link="#543D7d" text="#000000" vlink="#543D7d">
+    <div class="container">
+        <header class="book-header">
+            <div class="book-cover">
+                <img src="textbook/dls.jpg" alt="Macroeconomics textbook cover">
+            </div>
+            <div class="book-info">
+                <h1>Macroeconomics</h1>
+                <p class="authors">by Matthias Doepke, Andreas Lehnert, and Andrew Sellgren</p>
+            </div>
+        </header>
 
+        <main>
+            <!-- Description -->
+            <section>
+                <h2>About the Book</h2>
+                <p>From the Preface:</p>
+                <p>We have designed this book to be a supplement to Robert J. Barro's <em>Macroeconomics</em>, which is the textbook that is used in introductory macroeconomics courses at the University of Chicago. In teaching these courses, we have found that Barro's treatment of the subject does not make use of the mathematical skills of our students. In particular, Barro relies almost exclusively on economic intuition and graphs to elucidate his subject. Since our students are familiar with calculus, we are able to work out formal models. This almost always allows greater concreteness and concision.</p>
+            </section>
 
-<table width="90%">
-<tbody><tr>
-<td rowspan="4" width="10%"></td>
-<td colspan="3" valign="bottom">
+            <!-- Front Matter -->
+            <section class="download-section">
+                <h3>Front Matter and Preface</h3>
+                <table class="download-table">
+                    <tr>
+                        <th>Content</th>
+                        <th>Download</th>
+                        <th>Size</th>
+                    </tr>
+                    <tr>
+                        <td>Preface</td>
+                        <td>
+                            <a href="textbook/dls_pref.ps">PostScript</a>
+                            <a href="textbook/dls_pref.pdf">PDF</a>
+                        </td>
+                        <td class="file-size">103 Kb / 49 Kb</td>
+                    </tr>
+                </table>
+            </section>
 
-</td>
-</tr>
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
-<tr>
-<td valign="top" width="200">
-<img src="doepke.jpg" alt="Photo" valign="top">
-</td>
+            <!-- Complete Manuscript -->
+            <section class="download-section">
+                <h3>Complete Manuscript</h3>
+                <p>The entire 300-page manuscript is available, but beware of the large file sizes:</p>
+                <table class="download-table">
+                    <tr>
+                        <th>Format</th>
+                        <th>Download</th>
+                        <th>Size</th>
+                    </tr>
+                    <tr>
+                        <td>Complete Book</td>
+                        <td>
+                            <a href="textbook/main.ps">PostScript</a>
+                            <a href="textbook/main.pdf">PDF</a>
+                        </td>
+                        <td class="file-size">2047 Kb / 1656 Kb</td>
+                    </tr>
+                </table>
+            </section>
 
-<td width="20"></td>
-<td>
+            <!-- Individual Chapters -->
+            <section class="download-section">
+                <h3>Individual Chapters</h3>
+                <table class="download-table">
+                    <tr>
+                        <th>Content</th>
+                        <th>PostScript</th>
+                        <th>PDF</th>
+                    </tr>
+                    <tr>
+                        <td>Preface</td>
+                        <td><a href="textbook/dls_pref.ps">dls_pref.ps</a></td>
+                        <td><a href="textbook/dls_pref.pdf">dls_pref.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 1</td>
+                        <td><a href="textbook/dls_ch1.ps">dls_ch1.ps</a></td>
+                        <td><a href="textbook/dls_ch1.pdf">dls_ch1.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 2</td>
+                        <td><a href="textbook/dls_ch2.ps">dls_ch2.ps</a></td>
+                        <td><a href="textbook/dls_ch2.pdf">dls_ch2.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 3</td>
+                        <td><a href="textbook/dls_ch3.ps">dls_ch3.ps</a></td>
+                        <td><a href="textbook/dls_ch3.pdf">dls_ch3.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 4</td>
+                        <td><a href="textbook/dls_ch4.ps">dls_ch4.ps</a></td>
+                        <td><a href="textbook/dls_ch4.pdf">dls_ch4.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 5</td>
+                        <td><a href="textbook/dls_ch5.ps">dls_ch5.ps</a></td>
+                        <td><a href="textbook/dls_ch5.pdf">dls_ch5.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 6</td>
+                        <td><a href="textbook/dls_ch6.ps">dls_ch6.ps</a></td>
+                        <td><a href="textbook/dls_ch6.pdf">dls_ch6.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 8</td>
+                        <td><a href="textbook/dls_ch8.ps">dls_ch8.ps</a></td>
+                        <td><a href="textbook/dls_ch8.pdf">dls_ch8.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 9</td>
+                        <td><a href="textbook/dls_ch9.ps">dls_ch9.ps</a></td>
+                        <td><a href="textbook/dls_ch9.pdf">dls_ch9.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 10</td>
+                        <td><a href="textbook/dls_ch10.ps">dls_ch10.ps</a></td>
+                        <td><a href="textbook/dls_ch10.pdf">dls_ch10.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 11</td>
+                        <td><a href="textbook/dls_ch11.ps">dls_ch11.ps</a></td>
+                        <td><a href="textbook/dls_ch11.pdf">dls_ch11.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 12</td>
+                        <td><a href="textbook/dls_ch12.ps">dls_ch12.ps</a></td>
+                        <td><a href="textbook/dls_ch12.pdf">dls_ch12.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 13</td>
+                        <td><a href="textbook/dls_ch13.ps">dls_ch13.ps</a></td>
+                        <td><a href="textbook/dls_ch13.pdf">dls_ch13.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 14</td>
+                        <td><a href="textbook/dls_ch14.ps">dls_ch14.ps</a></td>
+                        <td><a href="textbook/dls_ch14.pdf">dls_ch14.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 15</td>
+                        <td><a href="textbook/dls_ch15.ps">dls_ch15.ps</a></td>
+                        <td><a href="textbook/dls_ch15.pdf">dls_ch15.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 17</td>
+                        <td><a href="textbook/dls_ch17.ps">dls_ch17.ps</a></td>
+                        <td><a href="textbook/dls_ch17.pdf">dls_ch17.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 18</td>
+                        <td><a href="textbook/dls_ch18.ps">dls_ch18.ps</a></td>
+                        <td><a href="textbook/dls_ch18.pdf">dls_ch18.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 19</td>
+                        <td><a href="textbook/dls_ch19.ps">dls_ch19.ps</a></td>
+                        <td><a href="textbook/dls_ch19.pdf">dls_ch19.pdf</a></td>
+                    </tr>
+                    <tr>
+                        <td>Solutions</td>
+                        <td><a href="textbook/dls_sols.ps">dls_sols.ps</a></td>
+                        <td><a href="textbook/dls_sols.pdf">dls_sols.pdf</a></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
 
-<p>
-<hr>
-<P><FONT FACE="Arial,Helvetica" SIZE="+1">Macroeconomics</FONT>
-<P>
-by Matthias Doepke, Andreas Lehnert, and Andrew Sellgren.
-<p>
-<table><tr>
-<td>
-From the Preface:
-<p>
-We have designed this book to be a supplement to Robert J. Barro's
-<i>Macroeconomics</i>,
-which is the textbook that is used in introductory macroeconomics
-courses at the University of Chicago.
-In teaching these courses,
-we have found that Barro's treatment of the subject does not
-make use of the mathematical skills of our students.
-In particular,
-Barro relies almost exclusively on economic intuition
-and graphs to elucidate his subject.
-Since our students are familiar with calculus,
-we are able to work out formal models.
-This almost always allows greater concreteness and concision.
-</td>
-<td>
-<img src="textbook/dls.jpg">
-</td>
-</tr></table>
-<p>
-You can learn more about this book by examining the front matter
-and preface:
-<br>
-<table border=0 cellspacing=2 valign=top>
-<tr>
-<td>As a PostScript file:</td>
-<td><a href="textbook/dls_pref.ps">dls_pref.ps</a></td>
-<td>(103 Kb, 22 Feb 00)
-</td>
-</tr>
-<tr>
-<td>As an Acrobat file:</td>
-<td><a href="textbook/dls_pref.pdf">dls_pref.pdf</a></td>
-<td>(49 Kb, 22 Feb 00)
-</td>
-</tr>
-</table>
-
-<p>
-The entire 300-page manuscript is available,
-but beware of the large file sizes:
-<br>
-<table border=0 cellspacing=2 valign=top>
-<tr>
-<td>As a PostScript file:</td>
-<td><a href="textbook/main.ps">main.ps</a></td>
-<td>(2047 Kb, 22 Feb 00)
-</td>
-</tr>
-<tr>
-<td>As an Acrobat file:</td>
-<td><a href="textbook/main.pdf">main.pdf</a></td>
-<td>(1656 Kb, 22 Feb 00)
-</td>
-</tr>
-</table>
-<P>
-You can also access the manuscript one chapter at a time:
-<table><tr>
-<td> </td>
-<td>
-<table cellpadding="2">
-<tr><td><b>Content</b></td><td><b>PostScript</b></td><td><b>Acrobat</b></td></tr>
-<tr><td>Preface</td><td><a href="textbook/dls_pref.ps">dls_pref.ps</a></td><td><a href="textbook/dls_pref.pdf">dls_pref.pdf</a></td></tr>
-<tr><td>Chapter 1</td><td><a href="textbook/dls_ch1.ps">dls_ch1.ps</a></td><td><a href="textbook/dls_ch1.pdf">dls_ch1.pdf</a></td></tr>
-<tr><td>Chapter 2</td><td><a href="textbook/dls_ch2.ps">dls_ch2.ps</a></td><td><a href="textbook/dls_ch2.pdf">dls_ch2.pdf</a></td></tr>
-<tr><td>Chapter 3</td><td><a href="textbook/dls_ch3.ps">dls_ch3.ps</a></td><td><a href="textbook/dls_ch3.pdf">dls_ch3.pdf</a></td></tr>
-<tr><td>Chapter 4</td><td><a href="textbook/dls_ch4.ps">dls_ch4.ps</a></td><td><a href="textbook/dls_ch4.pdf">dls_ch4.pdf</a></td></tr>
-<tr><td>Chapter 5</td><td><a href="textbook/dls_ch5.ps">dls_ch5.ps</a></td><td><a href="textbook/dls_ch5.pdf">dls_ch5.pdf</a></td></tr>
-<tr><td>Chapter 6</td><td><a href="textbook/dls_ch6.ps">dls_ch6.ps</a></td><td><a href="textbook/dls_ch6.pdf">dls_ch6.pdf</a></td></tr>
-<tr><td>Chapter 8</td><td><a href="textbook/dls_ch8.ps">dls_ch8.ps</a></td><td><a href="textbook/dls_ch8.pdf">dls_ch8.pdf</a></td></tr>
-<tr><td>Chapter 9</td><td><a href="textbook/dls_ch9.ps">dls_ch9.ps</a></td><td><a href="textbook/dls_ch9.pdf">dls_ch9.pdf</a></td></tr>
-<tr><td>Chapter 10</td><td><a href="textbook/dls_ch10.ps">dls_ch10.ps</a></td><td><a href="textbook/dls_ch10.pdf">dls_ch10.pdf</a></td></tr>
-<tr><td>Chapter 11</td><td><a href="textbook/dls_ch11.ps">dls_ch11.ps</a></td><td><a href="textbook/dls_ch11.pdf">dls_ch11.pdf</a></td></tr>
-<tr><td>Chapter 12</td><td><a href="textbook/dls_ch12.ps">dls_ch12.ps</a></td><td><a href="textbook/dls_ch12.pdf">dls_ch12.pdf</a></td></tr>
-<tr><td>Chapter 13</td><td><a href="textbook/dls_ch13.ps">dls_ch13.ps</a></td><td><a href="textbook/dls_ch13.pdf">dls_ch13.pdf</a></td></tr>
-<tr><td>Chapter 14</td><td><a href="textbook/dls_ch14.ps">dls_ch14.ps</a></td><td><a href="textbook/dls_ch14.pdf">dls_ch14.pdf</a></td></tr>
-<tr><td>Chapter 15</td><td><a href="textbook/dls_ch15.ps">dls_ch15.ps</a></td><td><a href="textbook/dls_ch15.pdf">dls_ch15.pdf</a></td></tr>
-<tr><td>Chapter 17</td><td><a href="textbook/dls_ch17.ps">dls_ch17.ps</a></td><td><a href="textbook/dls_ch17.pdf">dls_ch17.pdf</a></td></tr>
-<tr><td>Chapter 18</td><td><a href="textbook/dls_ch18.ps">dls_ch18.ps</a></td><td><a href="textbook/dls_ch18.pdf">dls_ch18.pdf</a></td></tr>
-<tr><td>Chapter 19</td><td><a href="textbook/dls_ch19.ps">dls_ch19.ps</a></td><td><a href="textbook/dls_ch19.pdf">dls_ch19.pdf</a></td></tr>
-<tr><td>Solutions</td><td><a href="textbook/dls_sols.ps">dls_sols.ps</a></td><td><a href="textbook/dls_sols.pdf">dls_sols.pdf</a></td></tr>
-</table>
-</table>
-<P>
-
-</tr>
-
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
-</tbody></table>
-
-</body></html>
+        <footer>
+            <p>© Matthias Doepke · London School of Economics</p>
+        </footer>
+    </div>
+</body>
+</html>

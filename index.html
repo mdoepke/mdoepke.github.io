@@ -1,135 +1,504 @@
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title>Matthias Doepke, London School of Economics</title>
-<link rel="icon" href="/favicon.png" type="image/png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthias Doepke - London School of Economics</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1E3A5F;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2d4a6f;
+        }
+
+        nav a.active {
+            background-color: #152d4a;
+        }
+
+        /* Header Section */
+        header {
+            border-bottom: 3px solid #1E3A5F;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .profile-photo {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-text h1 {
+            color: #1E3A5F;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .header-text .title {
+            color: #1E3A5F;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .header-text .affiliation {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Links */
+        a {
+            color: #1E3A5F;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            margin-bottom: 30px;
+        }
+
+        .about-section .research-statement {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .about-section .roles {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        /* Profile Links */
+        .profile-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .profile-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #1E3A5F;
+        }
+
+        .profile-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #1E3A5F;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #1E3A5F;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* News List */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            margin-bottom: 15px;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #1E3A5F, transparent);
+            margin: 35px 0;
+        }
+
+        /* Featured Book Section */
+        .featured-book {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .featured-book img {
+            width: 140px;
+            height: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+
+        .featured-book-content {
+            flex: 1;
+        }
+
+        .featured-book h3 {
+            color: #1E3A5F;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .featured-book h3 a {
+            color: #1E3A5F;
+        }
+
+        .featured-book p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .featured-book .book-links {
+            margin-top: 12px;
+        }
+
+        .featured-book .book-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #1E3A5F;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .featured-book .book-links a:hover {
+            background-color: #152d4a;
+            text-decoration: none;
+        }
+
+        .featured-book .award {
+            display: inline-block;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        /* Past Conferences - same style as News */
+        .past-conferences ul {
+            list-style: none;
+        }
+
+        .past-conferences li {
+            margin-bottom: 15px;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background-color: #f0f4f8;
+            padding: 25px 30px;
+            margin-top: 35px;
+            border-radius: 8px;
+            border-top: 4px solid #1E3A5F;
+        }
+
+        .contact-card h2 {
+            color: #1E3A5F;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding: 0;
+            border: none;
+        }
+
+        .contact-card p {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .contact-card .email {
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 2px solid #1E3A5F;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 150px;
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .featured-book {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .featured-book img {
+                width: 120px;
+            }
+
+            .profile-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="vita.pdf">Curriculum Vitae</a></li>
+        </ul>
+    </nav>
 
-<body alink="543D7d" bgcolor="#FFFFFF" link="#543D7d" text="#000000" vlink="#543D7d">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="profile-photo">
+                    <img src="doepke.jpg" alt="Matthias Doepke">
+                </div>
+                <div class="header-text">
+                    <h1>Matthias Doepke</h1>
+                    <p class="title">Nicholas Kaldor Professor of Economics</p>
+                    <p class="affiliation">London School of Economics and Political Science</p>
+                </div>
+            </div>
+        </header>
 
-<table width="90%">
-<tbody><tr>
+        <main>
+            <!-- About -->
+            <section class="about-section">
+                <p class="research-statement">I am a macroeconomist who works on issues related to family economics, growth, and development. Much of my work aims to understand how household choices (such as fertility, parenting, and education decisions) respond to macroeconomic conditions and, in turn, shape long-run economic outcomes.</p>
+                <p class="roles">Co-Editor, <a href="https://academic.oup.com/jeea/pages/Editorial_Board">Journal of the European Economic Association</a></p>
+                <div class="profile-links">
+                    <a href="http://scholar.google.com/citations?user=CYZ-wAoAAAAJ" target="_blank" class="profile-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                        </svg>
+                        Google Scholar
+                    </a>
+                    <a href="https://bsky.app/profile/mdoepke.bsky.social" target="_blank" class="profile-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+                        </svg>
+                        Bluesky
+                    </a>
+                </div>
+            </section>
 
-<td rowspan="4" width="10%"></td>
-<td colspan="3" valign="bottom">
-</td>
-</tr>
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
+            <!-- News & Highlights -->
+            <section>
+                <h2>News & Highlights</h2>
+                <ul class="news-list">
+                    <li>
+                        <a href="conferences/call_edesheim_2025.pdf">Call for Papers</a> and
+                        <a href="conferences/program_edesheim_2025.pdf">Program</a> 
+                        for a conference on "Families in Macroeconomics," to be held at Edesheim Castle on September 11 and 12, 2025. Submission deadline: April 30.
+                    </li>
+                    <li>
+                        New publication: <a href="research.html#peers">It Takes a Village: The Economics of Parenting with Neighborhood and Peer Effects</a> (with Francesco Agostinelli, Giuseppe Sorrenti, and Fabrizio Zilibotti) is forthcoming in the <em>Journal of Political Economy</em>.
+                    </li>
+                    <li>
+                        My <a href="https://www.youtube.com/watch?v=PzH5gkVp8no">Plenary Talk</a> at the <a href="https://www.economicdynamics.org/sedam_2023/">SED Annual Meeting</a> in Cartagena (<a href="research/sed_plenary_slides.pdf">slides</a>).
+                    </li>
+                    <li>
+                        New handbook chapter: <a href="research.html#handbookfertility">The Economics of Fertility: A New Era</a> (with Anne Hannusch, Fabian Kindermann, and Michèle Tertilt).
+                    </li>
+                    <li>
+                        New handbook chapter: <a href="research.html#handbookeducation">Educational Inequality</a> (with Jo Blanden and Jan Stuhler).
+                    </li>
+                    <li>
+                        <a href="https://hceconomics.uchicago.edu/news/3-questions-matthias-doepke">3 Questions Interview</a> with HCEO.
+                    </li>
+                </ul>
+            </section>
 
-<tr>
-<td valign="top" width="200">
-<img src="doepke.jpg" alt="Photo" valign="top">
-</td>
+            <!-- Visual separator -->
+            <hr class="section-divider">
 
-<td width="20"></td>
-<td ><font color="#000000" face="arial" size="3">
-<p>
-<font color="#000000" face="arial" size="2">
-[<a href="index.html">Home</a>] [<a href="research.html">Research</a>] [<a href="vita.pdf" >Curriculum Vitae</a>]</font>
-<p>
-<font color="#520063" face="arial" size="6">
-Matthias Doepke</font>
-<br>
-<font color="#520063" face="arial" size="4">
-Nicholas Kaldor Professor of Economics</font>
-<p>
-<hr>
-<p>
-<P><FONT FACE="arial" SIZE="4">
-News and Events</FONT>
-<p>
-<table><tr>
-<td width="80%" valign="top"><font color="#000000" face="arial" size="3">
+            <!-- Featured Book -->
+            <section class="featured-book">
+                <a href="lovemoneyparenting.html">
+                    <img src="cover.png" alt="Love, Money, and Parenting book cover">
+                </a>
+                <div class="featured-book-content">
+                    <h3><a href="lovemoneyparenting.html">Love, Money, and Parenting: How Economics Explains the Way We Raise Our Kids</a></h3>
+                    <p>With <a href="https://campuspress.yale.edu/zilibotti/">Fabrizio Zilibotti</a></p>
+                    <p>Translated into: Chinese (simplified), Chinese (traditional), Japanese, Korean, and Turkish.</p>
+                    <span class="award">🏆 Best Parenting Book of the Decade — Fatherly</span>
+                    <div class="book-links">
+                        <a href="lovemoneyparenting.html">Learn More</a>
+                        <a href="https://www.amazon.com/Love-Money-Parenting-Economics-Explains/dp/0691171513/">Buy on Amazon</a>
+                    </div>
+                </div>
+            </section>
 
-<p>
-<a href="conferences/call_edesheim_2025.pdf">Call for Papers</a> and
-<a href="conferences/program_edesheim_2025.pdf">Program</a> 
-for a conference on "Families in Macroeconomics," to be held at Edesheim Castle on September 11 and 12, 2025. Submission deadline: April 30.
+            <!-- Past Conferences -->
+            <section class="past-conferences">
+                <h2>Past Conferences</h2>
+                <ul>
+                    <li>
+                        <a href="conferences/call_mannheim_2018.pdf">Call for Papers</a>, 
+                        <a href="http://tertilt.vwl.uni-mannheim.de/conferences/FamilyConference/FamConference_Program.htm">Program</a>, and 
+                        <a href="http://tertilt.vwl.uni-mannheim.de/conferences/Fam_Econ_2018.jpg">Photo</a> — 
+                        "Families in Macroeconomics," Mannheim, Germany, October 18-20, 2018.
+                    </li>
+                    <li>
+                        <a href="conferences/call_edesheim_2015.pdf">Call for Papers</a> and 
+                        <a href="conferences/program_edesheim_2015.pdf">Program</a> — 
+                        "Families and the Macroeconomy," Edesheim, Germany, June 22-23, 2015.
+                        Photos: <a href="http://tertilt.vwl.uni-mannheim.de/photogallery_edesheim_sessions.html">here</a> and 
+                        <a href="http://tertilt.vwl.uni-mannheim.de/photogallery_edesheim.html">here</a>.
+                    </li>
+                    <li>
+                        <a href="http://www.economics.northwestern.edu/events/nemmers/2012.html">Conference Web Site</a> — 
+                        Nemmers Prize Conference in honor of Daron Acemoglu, Evanston, May 16-17, 2013.
+                    </li>
+                    <li>
+                        <a href="munich/call_munich_2011.pdf">Call for Papers</a> and 
+                        <a href="http://www.sfm.vwl.uni-muenchen.de/konferenzen/index.html">Conference Web Site</a> — 
+                        "Cultural Change and Economic Growth in the Long Run," University of Munich, July 1-2, 2011.
+                    </li>
+                    <li>
+                        <a href="munich/call_munich_2010.pdf">Call for Papers</a> and 
+                        <a href="http://www.sfm.vwl.uni-muenchen.de/konferenzen/sose_2010/index.html">Conference Web Site</a> — 
+                        European Workshop in Macroeconomics 2010, University of Munich, June 25-26, 2010.
+                    </li>
+                    <li>
+                        <a href="munich/program_munich_2009.pdf">Conference Program</a> — 
+                        "Asset Markets, Nominal Contracts, and Monetary Policy," University of Munich, June 24-26, 2009.
+                    </li>
+                    <li>
+                        Some <a href="pictures.html">pictures</a> with coauthors and former students.
+                    </li>
+                </ul>
+            </section>
 
+            <!-- Contact Information -->
+            <div class="contact-card">
+                <h2>Contact Information</h2>
+                <p>Department of Economics</p>
+                <p>London School of Economics and Political Science</p>
+                <p>Houghton Street</p>
+                <p>London WC2A 2AE, United Kingdom</p>
+                <p style="margin-top: 10px;">Office: Room 1.18, Sir Arthur Lewis Building (SAL)</p>
+                <p class="email">Email: <a href="mailto:m.doepke@lse.ac.uk">m.doepke@lse.ac.uk</a></p>
+            </div>
+        </main>
 
-<p>New publication: <A HREF="research.html#peers">It Takes a Village: The Economics of Parenting with Neighborhood and Peer Effects</A> (with Francesco Agostinelli, Giuseppe Sorrenti, and Fabrizio Zilibotti) is forthcoming in the <em>Journal of Political Economy</em>.
-
-<p>My <A HREF="https://www.youtube.com/watch?v=PzH5gkVp8no">Plenary Talk</A> at the <A HREF="https://www.economicdynamics.org/sedam_2023/">SED Annual Meeting</A> in Cartagena (<A HREF="research/sed_plenary_slides.pdf">slides</A>).
-
-<p>New handbook chapter: <A HREF="research.html#handbookfertility">The Economics of Fertility: A New Era</A> (with Anne Hannusch, Fabian Kindermann, and Mich&egrave;le Tertilt).
-
-<p>New handbook chapter: <A HREF="research.html#handbookeducation">Educational Inequality</A> (with Jo Blanden and Jan Stuhler).
-
-<p>My book with <a href="https://campuspress.yale.edu/zilibotti/">Fabrizio Zilibotti</a> on the economics of parenting
-<a href="lovemoneyparenting.html">Love, Money, and Parenting: How Economics Explains the Way We Raise
-Our Kids</a> has been named a <a href="https://www.fatherly.com/play/books/best-parenting-books-2010s-decade/">Best Parenting Book of the Decade</a> by <a href="https://www.fatherly.com/">Fatherly</a>!
-Buy the book on
-<a href="https://www.amazon.com/Love-Money-Parenting-Economics-Explains/dp/0691171513/">Amazon</a>. The book has been/is being translated into the following languages: Chinese (simplified), Chinese (traditional),
-Japanese, Korean, and Turkish.
-<p>I am a Co-Editor of the <a href="https://academic.oup.com/jeea/pages/Editorial_Board">Journal of the European Economic Association.</a>
-
-<p>Link to <a href="http://scholar.google.com/citations?user=CYZ-wAoAAAAJ">Google Scholar profile</a>.
-<p>Link to <a href="https://bsky.app/profile/mdoepke.bsky.social">Bluesky profile.</a>
-<p>
-
-<P>
-<a href="https://hceconomics.uchicago.edu/news/3-questions-matthias-doepke">3 Questions Interview with HCEO</a>.
-
-</font>
-<td width="20%" valign="top">
-<a href="lovemoneyparenting.html"><img src="cover.png" width="130" align="right"></a>
-</tr></table>
-<p><a href="conferences/call_mannheim_2018.pdf">Call for Papers</a>, <a href="http://tertilt.vwl.uni-mannheim.de/conferences/FamilyConference/FamConference_Program.htm">Program</a>,
-and <a href="http://tertilt.vwl.uni-mannheim.de/conferences/Fam_Econ_2018.jpg
-">Photo</a>
-for a conference on
-"Families in Macroeconomics," held in Mannheim, Germany October 18-20, 2018.
-<p>
-<a href="conferences/call_edesheim_2015.pdf">Call for Papers</a> and <a href="conferences/program_edesheim_2015.pdf">Program</a>
-for a conference on
-"Families and the Macroeconomy," held in Edesheim, Germany on June 22 and 23, 2015. Photos are
-<a href="http://tertilt.vwl.uni-mannheim.de/photogallery_edesheim_sessions.html">here</a> and
-<a href=" http://tertilt.vwl.uni-mannheim.de/photogallery_edesheim.html">here</a>.
-<p><a href="http://www.economics.northwestern.edu/events/nemmers/2012.html">Conference Web Site</a>
-for Nemmers Prize Conference in honor of Daron Acemoglu, held in Evanston on May 16 and 17, 2013.
-<p>
-<a href="munich/call_munich_2011.pdf">Call for Papers</a> and
-<a href="http://www.sfm.vwl.uni-muenchen.de/konferenzen/index.html">Conference Web Site</a>
-for conference on "Cultural Change and Economic Growth in the Long Run," held at the
-University of Munich on July 1 and 2, 2011.
-<p>
-<a href="munich/call_munich_2010.pdf">Call for Papers</a> and
-<a href="http://www.sfm.vwl.uni-muenchen.de/konferenzen/sose_2010/index.html">Conference Web Site</a>
-for the European Workshop in Macroeconomics 2010,
-held at the University of Munich on June 25 and 26, 2010.
-<p>
-<a href="munich/program_munich_2009.pdf">Conference Program</a> for the conference on
-"Asset Markets, Nominal Contracts, and Monetary Policy," held at the University of Munich on
-June 24-26, 2009.
-<p>
-Some <a href="pictures.html">pictures</a> with coauthors and former students.
-<p>
-<hr>
-<p>
-
-
-<P><FONT FACE="Arial,Helvetica" SIZE="+1">
-Contact Information</FONT>
-<p>
-Department of Economics<br>
-London School of Economics and Political Science<br>
-Houghton Street<br>
-London WC2A 2AE, United Kingdom<br>
-<br>
-My office is Room 1.18 in SAL (Sir Arthur Lewis Building)<br>
-<br>
-
-e-mail: <a href="mailto:m.doepke@lse.ac.uk">m.doepke@lse.ac.uk</a>
-
-</tr>
-
-<tr>
-<td colspan="3">
-<hr color="#520063"></td>
-</tr>
-</tbody></table>
-
-
-</body></html>
+        <footer>
+            <p>© Matthias Doepke · London School of Economics</p>
+        </footer>
+    </div>
+</body>
+</html>
